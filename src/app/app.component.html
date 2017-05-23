@@ -1,0 +1,74 @@
+<div class="container">
+  <h2>Components</h2>
+
+  <div class="row well">
+    <div class="col-sm-12"><h4>Pager</h4></div>
+    <div class="col-sm-6">
+      <ig-pager [rotate]="false" [totalItems]="page.totalResults"
+                [itemsPerPage]="page.pageSize"
+                (pageChanged)="onPageChange($event)">
+      </ig-pager>
+      <div class="col-sm-12">
+        <div class="col-sm-6">Total results:</div>
+        <div class="col-sm-6">
+          <input [(ngModel)]="page.totalResults" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="col-sm-6">Page size:</div>
+        <div class="col-sm-6">
+          <select [(ngModel)]="page.pageSize" class="form-control">
+            <option *ngFor="let size of page.pageSizes" [value]="size">{{size}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="col-sm-6">Current page:</div>
+        <div class="col-sm-6">
+          {{page.pageNumber}}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-6">
+      <pre><code>
+      &lt;ig-pager [totalItems]="page.totalResults"
+            [itemsPerPage]="page.pageSize"
+            (pageChanged)="onPageChange($event)"&gt;
+      &lt;/ig-pager&gt;
+
+
+      </code></pre>
+          <!--onPageChange = function(pageEvent) => {-->
+            <!--this.page.pageNumber = pageEvent.page;-->
+          <!--}-->
+    </div>
+
+  </div>
+
+  <div class="row well">
+    <div class="col-sm-12"><h4>Table</h4></div>
+    <div class="col-sm-6">
+      <ig-table [columns]="columns" [rows]="rows"></ig-table>
+    </div>
+    <div class="col-sm-6">
+      <pre><code>
+      &lt;ig-table [columns]="columns" [rows]="rows"&gt;&lt;/ig-table&gt;
+      </code></pre>
+      <div class="col-sm-12">columns:</div>
+      <div class="col-sm-12 well">{{columns | json }}</div>
+
+      <div class="col-sm-12">rows:</div>
+      <div class="col-sm-12 well">{{rows | json }}</div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<router-outlet></router-outlet>

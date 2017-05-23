@@ -1,0 +1,28 @@
+$primary-color: #c3d081;
+:host {
+  display: block;
+}
+
+.pagination {
+  margin: 0;
+
+  li {
+    a {
+      border: none;
+      background-color: transparent;
+      color: $primary-color;
+    }
+  }
+
+  .active {
+    a {
+      background-color: transparent;
+      color: darken($primary-color, 25%);
+    }
+  }
+}
+
+.ngx-pagination {
+  display: inline;
+}
+
