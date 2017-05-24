@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PaginationHeaderComponent } from './pagination-header.component';
-import {FormsModule} from "@angular/forms";
-import {PopoverModule} from "ngx-popover";
+import {FormsModule} from '@angular/forms';
+import {PopoverModule} from 'ngx-popover';
 
 describe('PaginationHeaderComponent', () => {
   let component: PaginationHeaderComponent;

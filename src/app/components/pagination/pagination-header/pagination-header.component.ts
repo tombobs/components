@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Page} from "../page";
+import {Page} from '../page';
 
 @Component({
   selector: 'ig-pagination-header',

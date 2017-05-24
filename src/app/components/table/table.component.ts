@@ -7,13 +7,12 @@ import {Component, ContentChild, ElementRef, Input, OnInit} from '@angular/core'
 })
 export class TableComponent implements OnInit {
 
-  @Input() rows;
-  @Input() columns;
-  @ContentChild(ElementRef) column: ElementRef;
+  @Input() rows: Array<any>;
+  @Input() columns: Array<{key: string, heading: string}>;
+
   constructor() { }
 
   ngOnInit() {
-    console.log(this.column)
   }
 
 }

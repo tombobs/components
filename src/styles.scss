@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/prismjs/themes/prism-okaidia.css";
+
+body {
+  background-color: #f3f3f3;
+}
+
+.well {
+  background-color: #fdfdfd;
+}
+
+.well-again {
+  padding: 20px;
+  border: 1px dashed #b7b7b7;
+  margin: 10px 0 20px 0;
+
+}

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {} from "./pager.component";
-import {PagerComponent} from "./pager.component";
+import {} from './pager.component';
+import {PagerComponent} from './pager.component';
 
 @NgModule({
   imports: [

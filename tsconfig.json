@@ -10,6 +10,8 @@
     "experimentalDecorators": true,
     "lib": [
       "es2016"
-    ]
-  }
+    ],
+    "typeRoots": ["types"]
+  },
+  "include": ["**/*.MD"]
 }

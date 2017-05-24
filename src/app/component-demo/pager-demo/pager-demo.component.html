@@ -1,0 +1,32 @@
+<app-component-wrapper [component]="pagerComponent">
+
+  <div class="well-again">
+    <ig-pager [totalItems]="page.totalResults"
+              [itemsPerPage]="page.pageSize"
+              (pageChanged)="onPageChange($event)"></ig-pager>
+  </div>
+
+  <div class="col-sm-12 form-group">
+    <div class="col-sm-6">Total results:</div>
+    <div class="col-sm-6">
+      <input [(ngModel)]="page.totalResults" class="form-control">
+    </div>
+  </div>
+
+  <div class="col-sm-12 form-group">
+    <div class="col-sm-6">Page size:</div>
+    <div class="col-sm-6">
+      <select [(ngModel)]="page.pageSize" class="form-control">
+        <option *ngFor="let size of page.pageSizes" [value]="size">{{size}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-sm-12 form-group">
+    <div class="col-sm-6">Current page:</div>
+    <div class="col-sm-6">
+      <strong>{{page.pageNumber}}</strong>
+    </div>
+  </div>
+
+</app-component-wrapper>

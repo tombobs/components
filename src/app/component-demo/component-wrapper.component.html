@@ -1,0 +1,9 @@
+<div class="row well">
+  <h3>{{component.name}}</h3>
+
+  <div class="col-sm-6">
+    <ng-content></ng-content>
+  </div>
+
+  <div class="col-sm-6" [innerHTML]="readmeMarkup"></div>
+</div>
