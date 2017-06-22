@@ -1,5 +1,17 @@
 <app-component-wrapper [component]="tableComponent">
-  <div class="well-again">
-    <ig-table [columns]="columns" [rows]="rows"></ig-table>
-  </div>
+
+  <ig-table [columns]="columns" [rows]="rows">
+
+    <ng-template app-column class="column" column="columnOne" let-text>piss: {{text}}</ng-template>
+    <!--<app-column #columnOne>-->
+      <!--piss-->
+    <!--</app-column>-->
+    <app-column column="columnTwo">piss 2</app-column>
+    <!--<span class="lol">fff</span>-->
+
+      <!---->
+      <!--{{row}}-->
+
+
+  </ig-table>
 </app-component-wrapper>

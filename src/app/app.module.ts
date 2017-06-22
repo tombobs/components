@@ -5,16 +5,22 @@ import {HttpModule} from "@angular/http";
 
 import {AppComponent} from "./app.component";
 import {ComponentWrapperModule} from "./component-demo/component-wrapper.module";
+import {AppRoutingModule} from "./app-routing.module";
+import {TargetComponent} from "./component-demo/target/target.component";
+import { ColumnDirective } from './column.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TargetComponent,
+    ColumnDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     ComponentWrapperModule,
+    AppRoutingModule
 
   ],
   providers: [],

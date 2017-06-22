@@ -1,17 +1,24 @@
 <table class="table table-bordered table-striped table-responsive table-condensed">
   <thead>
-  <th *ngFor="let column of columns">{{column.heading}}</th>
+  <!--<th *ngFor="let column of columns">{{column.heading}}</th>-->
   </thead>
   <tbody>
   <tr *ngFor="let row of rows">
-    <td *ngFor="let column of columns">
-      <span *ngIf="!column.custom">
-        {{row[column.key]}}
-      </span>
-      <span *ngIf="column.custom">
-        <ng-content [attr.select]="column.key"></ng-content>
-      </span>
+    <td *ngFor="let column of columns" [ngSwitch]="column.type" class="item" appColumn>
+      <app-table-cell></app-table-cell>
+      <!--<ng-template #cellTemplate-->
+                   <!--*ngIf="column.cellTemplate"-->
+                   <!--[ngTemplateOutlet]="column.cellTemplate">-->
+      <!--</ng-template>-->
+      <!--<span *ngIf="templates[column.key]">-->
+      <!---->
+      <!--{{templates[column.key]}}-->
+      <!--<ng-template [ngTemplateOutlet]="templates[column.key]"></ng-template>-->
+      <!--<ng-container *ngTemplateOutlet="columnOne; context: {$implicit: row}"></ng-container>-->
+      <!--</span>-->
+      <!--<span *ngIf="!templates[column.key]">{{row[column.key]}}</span>-->
     </td>
   </tr>
   </tbody>
 </table>
+

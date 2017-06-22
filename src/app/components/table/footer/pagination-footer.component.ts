@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Page} from '../page';
+import {Page} from '../../pagination/page';
 
 @Component({
   selector: 'ig-pagination-footer',

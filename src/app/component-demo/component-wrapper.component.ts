@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ComponentDemo} from "./component-demo.interfaces";
 
 declare const require: any;
 const marked = require('marked');
@@ -10,7 +11,7 @@ const marked = require('marked');
 })
 export class ComponentWrapperComponent implements OnInit {
 
-  @Input() component: {name: string, markdown: string};
+  @Input() component: ComponentDemo;
   readmeMarkup: string;
   constructor() { }
 

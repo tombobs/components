@@ -7,6 +7,8 @@ import {PagerModule} from "../components/pagination/pager/pager.module";
 import {PagerDemoComponent} from "./pager-demo/pager-demo.component";
 import {ComponentWrapperComponent} from "./component-wrapper.component";
 import {TableDemoComponent} from "./table-demo/table-demo.component";
+import {LinkModule} from "../components/link/link.module";
+import {ColumnModule} from "../components/column/column.module";
 
 @NgModule({
   imports: [
@@ -14,9 +16,12 @@ import {TableDemoComponent} from "./table-demo/table-demo.component";
     MarkdownModule,
     TableModule,
     PagerModule,
-    FormsModule
+    FormsModule,
+    LinkModule,
+    ColumnModule
   ],
-  declarations: [ComponentWrapperComponent,
+  declarations: [
+    ComponentWrapperComponent,
     TableDemoComponent,
     PagerDemoComponent
   ],
